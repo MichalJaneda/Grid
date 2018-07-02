@@ -1,0 +1,11 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "author": "MichałJaneda",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
