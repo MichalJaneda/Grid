@@ -1,0 +1,26 @@
+@mixin bg_image_center() {
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin bg_tint($color, $transparency: 0.5, $transition-time: 1000, $transition-animation: 'linear') {
+  background-blend-mode: multiply;
+  background-color: transparentize($color, $transparency);
+
+  @if ($transition-time > 0.0) {
+    $transition-animation: unquote($transition-animation);
+    $time: unquote($transition-time + 'ms');
+
+    -webkit-transition: background-color $time $transition-animation;
+    -ms-transition: background-color $time $transition-animation;
+    transition: background-color $time $transition-animation;
+  }
+}
+
+@mixin rotate($degrees) {
+  $with-scale: unquote($degrees + 'deg');
+  -webkit-transform: rotate($with-scale);
+  -moz-transform: rotate($with-scale);
+  -ms-transform: rotate($with-scale);
+  -o-transform: rotate($with-scale);
+}
